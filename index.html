@@ -8,16 +8,33 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 
   <style>
+    body {
+      background-color: #0038B1;
+      width: 300px;
+      margin: auto;
+    }
+    fieldset {
+      margin-bottom: 10px ;
+      width: 300px;
+      border: 1px solid #ffffff;
+    }
+    
     legend {
     background-color: #00BDFF;
     color: #000000;
     padding: 2px 2px;
     margin: 0 auto;
-}
-input {
-    margin: .4rem;
-}
+    }
 
+    #telephone {
+      width: 18em;
+    }
+
+    textarea {
+      padding: 5px;
+      border-radius: 15px;
+      border: 3px solid #fff;
+    }
   </style>
 </head>
 
@@ -26,35 +43,36 @@ input {
     <header>
       <h1>Survey Form - ITK Software Path</h1>  
     </header>
+    
     <form>
     <!--  Input: Name-->
     <fieldset>
+      <legend><label for="name">Name</label></legend>
       <div class="form-element">
-        <label for="name">Name : </label>
-        <input type="text" name="Name" id="name">
+        <input type="text" name="Name" id="name" placeholder="Please write your name..." size="30">
       </div>
     </fieldset>
       
     <!--  Input: Email Address-->
     <fieldset>
+      <legend><label for="email-address">Email</label></legend>
       <div class="form-element">
-        <label for="email-address">Email Address : </label>
-        <input type="email" name="emailAddress" id="email-address">
+        <input type="email" name="emailAddress" id="email-address" placeholder="Please write your email..." size="30">
       </div>
     </fieldset>
       
     <!--  Input: Telephone-->
     <fieldset>
+      <legend><label for="telephone">Telephone #</label></legend>
       <div class="form-element">
-        <label for="telephone">Telephone # : </label>
-        <input type="number" name="Telephone" id="telephone">
+        <input type="number" name="Telephone" id="telephone" placeholder="Please write your telephone number...">
       </div>
     </fieldset>
       
     <!--  Select: Gender-->
     <fieldset>
+      <legend><label for="select-for-gender">Name</label></legend>
       <div class="form-element">
-        <label for="select-for-gender">Gender</label>
         <select name="gender" id="select-for-gender">
           <option value="">Select your gender!</option>
           <option value="Male">Male</option>
@@ -66,33 +84,35 @@ input {
     
     <!--  Input: Software Path-->
     <fieldset>
-      <legend>What are you studying at ITK? </legend>
+      <legend><label for="softwareChoice1">What are you studying at ITK? </label></legend>
       <div class="form-element">
-        <label for="softwareChoice1">Flutter </label>
         <input type="radio" name="softwarePath" id="softwareChoice1" value="flutter">
+        <label for="softwareChoice1" style="margin-right: 1.5em;">Flutter </label>
       </div>
       <div class="form-element">
-        <label for="softwareChoice2">Salesforce </label>
         <input type="radio" name="softwarePath" id="softwareChoice2" value="Salesforce">
+        <label for="softwareChoice2">Salesforce </label>
       </div>
       <div class="form-element">
-        <label for="softwareChoice3">JavaScript </label>
         <input type="radio" name="softwarePath" id="softwareChoice3" value="JavaScript">
+        <label for="softwareChoice3">JavaScript </label>
       </div>
     </fieldset>
       
-    <!--  Comments-->
+    <!--  Textarea: Comments-->
     <fieldset>
-      <legend>Comments</legend>
+      <legend><label for="textarea">Comments</label></legend>
       <div class="form-element">
-      <textarea name="comments" id="textarea" cols="30" rows="10"></textarea>
+      <textarea name="comments" id="textarea" cols="30" rows="10" placeholder="Please provide your feedback..."></textarea>
     </div>      
     </fieldset>
+      
+    <!--  Checkbox: Another survey-->
     <fieldset>
-      <legend>Do you need to complete another survey? </legend>
+      <legend><label for="Yes">Do you need to complete another survey? </label></legend>
       <div>
-        <label for="Yes">Yes</label>
         <input type="checkbox" id="Yes" name="yes">
+        <label for="Yes">Yes</label>
       </div>
     </fieldset>
   </form>
