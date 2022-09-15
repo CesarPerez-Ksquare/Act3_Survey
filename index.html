@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Survey Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <header>
+      <h1>Survey Form - ITK Software Path</h1>  
+    </header>
+    <form>
+    <!--  Input: Name-->
+    <fieldset>
+      <div class="form-element">
+        <label for="name">Name : </label>
+        <input type="text" name="Name" id="name">
+      </div>
+    </fieldset>
+      
+    <!--  Input: Email Address-->
+    <fieldset>
+      <div class="form-element">
+        <label for="email-address">Email Address : </label>
+        <input type="email" name="emailAddress" id="email-address">
+      </div>
+    </fieldset>
+      
+    <!--  Input: Telephone-->
+    <fieldset>
+      <div class="form-element">
+        <label for="telephone">Telephone # : </label>
+        <input type="number" name="Telephone" id="telephone">
+      </div>
+    </fieldset>
+      
+    <!--  Select: Gender-->
+    <fieldset>
+      <div class="form-element">
+        <label for="select-for-gender">Gender</label>
+        <select name="gender" id="select-for-gender">
+          <option value="">Select your gender!</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Prefer not to answer">Prefer not to answer</option>
+        </select>
+      </div> 
+    </fieldset>
+    
+    <!--  Input: Software Path-->
+    <fieldset>
+      <legend>What are you studying at ITK? </legend>
+      <div class="form-element">
+        <label for="softwareChoice1">Flutter </label>
+        <input type="radio" name="softwarePath" id="softwareChoice1" value="flutter">
+      </div>
+      <div class="form-element">
+        <label for="softwareChoice2">Salesforce </label>
+        <input type="radio" name="softwarePath" id="softwareChoice2" value="Salesforce">
+      </div>
+      <div class="form-element">
+        <label for="softwareChoice3">JavaScript </label>
+        <input type="radio" name="softwarePath" id="softwareChoice3" value="JavaScript">
+      </div>
+    </fieldset>
+      
+    <!--  Comments-->
+    <fieldset>
+      <legend>Comments</legend>
+      <div class="form-element">
+      <textarea name="comments" id="textarea" cols="30" rows="10"></textarea>
+    </div>      
+    </fieldset>
+    <fieldset>
+      <legend>Do you need to complete another survey? </legend>
+      <div>
+        <label for="Yes">Yes</label>
+        <input type="checkbox" id="Yes" name="yes">
+      </div>
+    </fieldset>
+  </form>
+  </center>
+</body>
+
+</html>
